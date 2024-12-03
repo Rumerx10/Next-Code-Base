@@ -42,7 +42,7 @@ const Carousel = () => {
   }, [isResetting]);
 
   return (
-    <div className="relative overflow-hidden w-60 h-64">
+    <div className="relative overflow-hidden w-[600px] h-[700px]">
       <div
         className={`flex transition-transform ease-in-out ${
           isResetting ? 'duration-300' : 'duration-200'
@@ -58,9 +58,13 @@ const Carousel = () => {
             key={index}
             src={src}
             alt={`Slide ${index + 1}`}
-            className="w-full h-64 object-cover"
+            className="w-auto h-auto"
           />
         ))}
+      </div>
+      <div className='absolute flex flex-col items-center justify-center gap-10 italic inset-0 bg-gray-950/30'>
+        <h1 className='text-whtie text-5xl text-white font-bold italic'>TITLE OF THE CAROUSEL</h1>
+        <p className='text-whtie text-xl text-white font-semibold italic'>Description of the caroulse...</p>
       </div>
     </div>
   );

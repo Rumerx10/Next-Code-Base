@@ -1,11 +1,14 @@
 import Carousel from "./(components)/Carousel";
-import DotCarousel from "./(components)/DotCarousel";
 
 export default function Home() {
   return (
-    <div>
-      <Carousel />
-      <DotCarousel />
+    <div className="flex flex-col gap-10">
+      <div className="bg-gray-200 flex items-center justify-center">
+        <Carousel />
+      </div>
+      <div className="w-56 overflow-hidden">
+       
+      </div>
     </div>
   );
 }
