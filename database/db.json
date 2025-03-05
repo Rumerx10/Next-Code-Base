@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Essence Mascara Lash Princess",
+      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      "category": "beauty",
+      "price": "8.99",
+      "rating": 4.94
+    },
+    {
+      "id": "3",
+      "title": "Nivea Soft Moisturizing Cream",
+      "description": "A lightweight moisturizing cream that hydrates and protects the skin. Suitable for all skin types.",
+      "category": "skincare",
+      "price": "5.99",
+      "rating": 4.7
+    },
+    {
+      "id": "4",
+      "title": "L'Oreal Paris Elvive Shampoo",
+      "description": "A nourishing shampoo that repairs damaged hair and restores its natural shine.",
+      "category": "haircare",
+      "price": 6.99,
+      "rating": "4.9"
+    },
+    {
+      "id": "5",
+      "title": "CeraVe Foaming Facial Cleanser",
+      "description": "A gentle foaming cleanser that removes dirt and excess oil without stripping the skin's natural moisture.",
+      "category": "skincare",
+      "price": 12.99,
+      "rating": 4.9
+    },
+    {
+      "id": "6",
+      "title": "Revlon ColorStay Foundation",
+      "description": "A long-wear foundation that provides flawless coverage for up to 24 hours.",
+      "category": "beauty",
+      "price": 14.99,
+      "rating": 4.75
+    },
+    {
+      "id": "7",
+      "title": "Garnier Micellar Cleansing Water",
+      "description": "A gentle micellar water that removes makeup and cleanses the skin without rinsing.",
+      "category": "skincare",
+      "price": 7.99,
+      "rating": 4.85
+    },
+    {
+      "id": "8",
+      "title": "Pantene Pro-V Repair & Protect Shampoo",
+      "description": "A shampoo that repairs and protects hair from damage, leaving it soft and shiny.",
+      "category": "haircare",
+      "price": 7.49,
+      "rating": 4.65
+    },
+    {
+      "id": "10",
+      "title": "Eyelure False Eyelashes",
+      "description": "High-quality false eyelashes that add volume and length to your natural lashes.",
+      "category": "beauty",
+      "price": 10.99,
+      "rating": 4.7
+    },
+    {
+      "id": "hHgN1Sw9sKC6EgfFRhIkp",
+      "title": "L'Oreal Paris Elvive Shampoo",
+      "description": "A nourishing shampoo that repairs damaged hair and restores its natural shine.",
+      "category": "haircare",
+      "price": 6.99,
+      "rating": 4.6
+    },
+    {
+      "id": "pbVD1J1HH02k8SMR4EYAN",
+      "title": "Nivea Soft Moisturizing Cream",
+      "description": "A lightweight moisturizing cream that hydrates and protects the skin. Suitable for all skin types.",
+      "category": "skincare",
+      "price": 5.99,
+      "rating": 4.7
+    },
+    {
+      "id": "YX6W_8g9FxJbrWqTj7cj2",
+      "title": "Vero commodi ipsam u",
+      "description": "Dolores enim rerum e",
+      "category": "Ut sunt voluptates s",
+      "price": "454",
+      "rating": "Nemo animi aliquam "
+    },
+    {
+      "id": "9y87CqI6DWEG6060sn-tR",
+      "title": "Nisi in ex id alias",
+      "description": "Aspernatur possimus",
+      "category": "Est eos esse explic",
+      "price": "287",
+      "rating": "Officiis natus iure "
+    }
+  ]
+}
