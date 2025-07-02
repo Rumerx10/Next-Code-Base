@@ -27,6 +27,7 @@ export default function RootLayout({
     { name: "Carousels", href: "/carousel" },
     { name: "DropDowns", href: "/dropdown" },
     { name: "Table", href: "/table" },
+    { name: "No found", href: "/not-found" },
   ];
 
   return (
