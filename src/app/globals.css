@@ -28,13 +28,10 @@
 }
 
 body {
-  overflow:hidden;
+  /* overflow:hidden; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* *{
-  border-color: #e5e5e5;
-} */
 
 *:not([class*="border-"]) {
   border-color: #e5e5e5;

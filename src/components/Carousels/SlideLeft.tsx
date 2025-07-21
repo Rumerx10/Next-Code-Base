@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import ExcludeSvg from "@/components/Icons/ExcludeSvg";
+
 
 
 const SlideLeft = () => {
