@@ -28,8 +28,8 @@ export default function RootLayout({
     { name: "DropDowns", href: "/dropdown" },
     { name: "Table", href: "/table" },
     { name: "Media", href: "/media" },
-
     { name: "No found", href: "/not-found" },
+    { name: "Breadcrumb", href: "/breadcrumb" },
   ];
 
   return (
