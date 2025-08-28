@@ -2,6 +2,7 @@
 import AutoSlider from '@/components/Carousels/AutoSlider';
 import SlideLeft from '@/components/Carousels/SlideLeft';
 import SwiperCarousel from '@/components/Carousels/SwiperCarousel';
+import WindowCarousel from '@/components/Carousels/WindowCarousel';
 import React from 'react';
 
 const page = () => {
@@ -10,6 +11,7 @@ const page = () => {
       <SlideLeft />
       <SwiperCarousel />
       <AutoSlider />
+      <WindowCarousel />
     </div>
   );
 }
