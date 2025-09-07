@@ -30,6 +30,7 @@ export default function RootLayout({
     { name: "Media", href: "/media" },
     { name: "No found", href: "/not-found" },
     { name: "Breadcrumb", href: "/breadcrumb" },
+    { name: "Stepper/Tracker", href: "/tracking-stepper" },
   ];
 
   return (
