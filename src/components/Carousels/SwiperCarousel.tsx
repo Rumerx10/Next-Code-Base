@@ -17,16 +17,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { Images } from "@/lib/utils";
+
 
 const SwiperCarousel = () => {
-  const images = [
-    "/images/bg1.png",
-    "/images/bg2.png",
-    "/images/bg3.png",
-    "/images/bg1.png",
-    "/images/bg2.png",
-    "/images/bg3.png",
-  ];
 
   return (
     <div className="relative px-0 lg:px-20 py-0 lg:py-10 flex flex-col gap-10 w-full h-[400px] bg-white overflow-visible border border-red-800">
@@ -57,7 +51,7 @@ const SwiperCarousel = () => {
         onSlideChange={() => console.log("slide change")}
         className="relative w-full h-full px-20 overflow-visible"
       >
-        {images.map((img, index) => (
+        {Images.map((img, index) => (
           <SwiperSlide key={index}>
             <Image
               width={1280}
@@ -84,7 +78,7 @@ const SwiperCarousel = () => {
 
       {/* Navigation Buttons BOTTOM_ALIGNMENT -------------------------------------------------*/}
 
-      {/* <div className="absolute hidden lg:block left-[47%] bottom-3.5 transform -translate-y-1/2">
+      <div className="absolute hidden lg:block left-[47%] bottom-3.5 transform -translate-y-1/2">
         <div className="swiper-button-prev text-white">
           <IoIosArrowBack size={16} color="#1DBF73" />
         </div>
@@ -93,7 +87,7 @@ const SwiperCarousel = () => {
         <div className="swiper-button-next text-white">
           <IoIosArrowForward size={32} color="#1DBF73" />
         </div>
-      </div> */}
+      </div>
 
 
 

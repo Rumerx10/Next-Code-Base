@@ -1,11 +1,13 @@
 "use client";
+
+import { Images } from "@/lib/utils";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
 
 
 const SlideLeft = () => {
-  const images = ["/images/bg1.png", "/images/bg2.png", "/images/bg3.png"];
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isResetting, setIsResetting] = useState(false);
@@ -14,7 +16,7 @@ const SlideLeft = () => {
     const interval = setInterval(() => {
       if (isResetting) return; // Skip interval logic during reset
 
-      if (currentIndex === images.length - 1) {
+      if (currentIndex === Images.length - 1) {
         // Pause for 300ms, then trigger full reset
         setTimeout(() => {
           setIsResetting(true);
@@ -26,7 +28,7 @@ const SlideLeft = () => {
     }, 3000); // Normal interval for each slide
 
     return () => clearInterval(interval);
-  }, [currentIndex, isResetting, images.length]);
+  }, [currentIndex, isResetting]);
 
   // Handle animation reset
   useEffect(() => {
@@ -64,7 +66,7 @@ const SlideLeft = () => {
               }%)`,
             }}
           >
-            {images.map((src, index) => (
+            {Images.map((src, index) => (
               <Image
                 height={920}
                 width={947}

@@ -6,22 +6,17 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import Image from "next/image";
+import { Images } from "@/lib/utils";
 
 const WindowCarousel = () => {
-    const imgs = [
-    "/images/bg1.png",
-    "/images/bg2.png",
-    "/images/bg3.png",
-    "/images/bg1.png",
-    "/images/bg2.png",
-    "/images/bg3.png",
-  ];
+
 
   return (
     <div className="w-full">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
+        loop={true}
         centeredSlides={true}
         slidesPerView={"auto"}
         coverflowEffect={{
@@ -42,17 +37,17 @@ const WindowCarousel = () => {
           },
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
-        className="w-full border-2 border-green-500"
+        className="w-full border-2 border-white"
       >
-        {imgs.map(() => (
+        {Images.map((img,idx) => (
           <SwiperSlide
             className="!flex !w-xl mb-16"
-            key={Math.random()}
+            key={idx}
           >
             <Image
-              className="!object-cover"
+              className="object-cover w-full h-[380px]"
               alt="achievements"
-              src="/faculty/achievements/1.png"
+              src={img}
               width={627}
               height={400}
             />
