@@ -13,7 +13,11 @@ import {
 
 const BreadcrumbSection = () => {
   const pathName = usePathname();
-  const segments = pathName.split("/").filter(Boolean);
+  const segments = pathName
+    .split("/")
+    .filter(Boolean)
+    .map((seg) => decodeURIComponent(seg));
+
   const breadcrumbItems = segments.map((segment, idx) => {
     const href = "/" + segments.slice(0, idx + 1).join("/");
     return {
@@ -22,16 +26,20 @@ const BreadcrumbSection = () => {
     };
   });
   return (
-    <div className="text-2xl font-semibold">
+    <div className="container flex items-center w-full text-2xl font-semibold h-16 py-5">
       <Breadcrumb>
         <BreadcrumbList>
           {breadcrumbItems.map((item, idx) => (
             <BreadcrumbItem key={item.href}>
               {idx === breadcrumbItems.length - 1 ? (
-                <BreadcrumbPage>{item.label}</BreadcrumbPage>
+                <BreadcrumbPage className="text-[#1561BC] font-medium text-sm">
+                  {item.label}
+                </BreadcrumbPage>
               ) : (
                 <>
-                  <BreadcrumbLink href={item.href}>{item.label}</BreadcrumbLink>
+                  <BreadcrumbLink className="font-medium" href={item.href}>
+                    {item.label}
+                  </BreadcrumbLink>
                   <BreadcrumbSeparator />
                 </>
               )}
