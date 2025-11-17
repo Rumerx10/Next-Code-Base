@@ -1,3 +1,4 @@
+import AchievementsCarousel from "@/components/Carousels/AchievementsCarousel";
 import AutoSlider from "@/components/Carousels/AutoSlider";
 import SlideLeft from "@/components/Carousels/SlideLeft";
 import SwiperCarousel from "@/components/Carousels/SwiperCarousel";
@@ -14,6 +15,7 @@ const page = () => {
       <SwiperCarousel />
       <AutoSlider />
       <WindowCarousel />
+      <AchievementsCarousel />
     </div>
   );
 };
