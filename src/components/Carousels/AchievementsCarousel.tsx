@@ -116,7 +116,9 @@ const AchievementsCarousel = () => {
 
   return (
     <div className="bg-liteBlue py-10">
-      <h2 className="text-center text-3xl lg:text-[40px] text-dpViolet">Achievements Carousel</h2>
+      <h2 className="text-center text-3xl lg:text-[40px] text-dpViolet">
+        Achievements Carousel
+      </h2>
 
       <div className="py-10 flex justify-center items-center">
         <div className="relative h-[400px] flex items-center w-full max-w-6xl mx-auto">
