@@ -1,16 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { Copy, Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
-const ReactTable = () => {
-  const [copied, setCopied] = useState(false);
-
-  const codeString = `"use client";
-
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import toast from "react-hot-toast";
 import {
@@ -156,7 +145,7 @@ const FilterDropdown = ({
         {selectedLabel}
         <ChevronDown
           size={14}
-          className={\`text-gray-400 transition-transform \${isOpen ? "rotate-180" : ""}\`}
+          className={`text-gray-400 transition-transform ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
       {isOpen && (
@@ -173,11 +162,11 @@ const FilterDropdown = ({
                     onChange(opt.value);
                     onClose();
                   }}
-                  className={\`flex w-full items-center justify-between gap-4 rounded-md px-2.5 py-1.5 text-left text-sm whitespace-nowrap \${
+                  className={`flex w-full items-center justify-between gap-4 rounded-md px-2.5 py-1.5 text-left text-sm whitespace-nowrap ${
                     selected
                       ? "bg-indigo-50 font-medium text-indigo-600"
                       : "text-gray-700 hover:bg-gray-50"
-                  }\`}
+                  }`}
                 >
                   {opt.label}
                   {selected && <Check size={14} />}
@@ -280,14 +269,14 @@ const UsersTablePage = () => {
   const handleSaveEdit = () => {
     if (!editForm) return;
     setData((prev) => prev.map((u) => (u.id === editForm.id ? editForm : u)));
-    toast.success(\`\${editForm.name} updated\`);
+    toast.success(`${editForm.name} updated`);
     closeModal();
   };
 
   const handleConfirmDelete = () => {
     if (modal?.mode !== "delete") return;
     setData((prev) => prev.filter((u) => u.id !== modal.user.id));
-    toast.success(\`\${modal.user.name} deleted\`);
+    toast.success(`${modal.user.name} deleted`);
     closeModal();
   };
 
@@ -299,9 +288,9 @@ const UsersTablePage = () => {
         cell: ({ row }) => (
           <div className="flex items-center gap-3">
             <span
-              className={\`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-semibold \${getAvatarColor(
+              className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-semibold ${getAvatarColor(
                 row.original.name,
-              )}\`}
+              )}`}
             >
               {getInitials(row.original.name)}
             </span>
@@ -330,7 +319,7 @@ const UsersTablePage = () => {
               : score >= 50
                 ? "text-amber-600"
                 : "text-rose-600";
-          return <span className={\`font-semibold \${color}\`}>{score}</span>;
+          return <span className={`font-semibold ${color}`}>{score}</span>;
         },
       },
       {
@@ -345,16 +334,16 @@ const UsersTablePage = () => {
           const isActive = status === "active";
           return (
             <span
-              className={\`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium capitalize ring-1 ring-inset \${
+              className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium capitalize ring-1 ring-inset ${
                 isActive
                   ? "bg-emerald-50 text-emerald-700 ring-emerald-600/20"
                   : "bg-gray-100 text-gray-600 ring-gray-500/10"
-              }\`}
+              }`}
             >
               <span
-                className={\`h-1.5 w-1.5 rounded-full \${
+                className={`h-1.5 w-1.5 rounded-full ${
                   isActive ? "bg-emerald-500" : "bg-gray-400"
-                }\`}
+                }`}
               />
               {status}
             </span>
@@ -513,7 +502,7 @@ const UsersTablePage = () => {
               }
               options={PAGE_SIZE_OPTIONS.map((opt) => ({
                 value: opt,
-                label: opt === "All" ? "Show All" : \`Show \${opt}\`,
+                label: opt === "All" ? "Show All" : `Show ${opt}`,
               }))}
               isOpen={openMenu === "pageSize"}
               onToggle={() => toggleMenu("pageSize")}
@@ -569,11 +558,11 @@ const UsersTablePage = () => {
                         <th
                           key={header.id}
                           onClick={header.column.getToggleSortingHandler()}
-                          className={\`px-4 py-3 text-xs font-semibold uppercase tracking-wide text-gray-500 whitespace-nowrap \${
+                          className={`px-4 py-3 text-xs font-semibold uppercase tracking-wide text-gray-500 whitespace-nowrap ${
                             header.column.getCanSort()
                               ? "cursor-pointer select-none hover:text-gray-700"
                               : ""
-                          }\`}
+                          }`}
                         >
                           <div className="flex items-center gap-1">
                             {flexRender(
@@ -647,7 +636,7 @@ const UsersTablePage = () => {
                 (page, i) =>
                   page === "ellipsis" ? (
                     <span
-                      key={\`ellipsis-\${i}\`}
+                      key={`ellipsis-${i}`}
                       className="px-2 text-sm text-gray-400"
                     >
                       …
@@ -657,11 +646,11 @@ const UsersTablePage = () => {
                       key={page}
                       type="button"
                       onClick={() => table.setPageIndex(page - 1)}
-                      className={\`rounded-md border px-3 py-1.5 text-sm \${
+                      className={`rounded-md border px-3 py-1.5 text-sm ${
                         pageIndex === page - 1
                           ? "border-indigo-600 bg-indigo-600 text-white"
                           : "border-gray-300 bg-white text-gray-600 hover:bg-gray-50"
-                      }\`}
+                      }`}
                     >
                       {page}
                     </button>
@@ -693,9 +682,9 @@ const UsersTablePage = () => {
       <Modal title="User details" onClose={closeModal}>
         <div className="flex items-center gap-3 pb-4">
           <span
-            className={\`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-sm font-semibold \${getAvatarColor(
+            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-sm font-semibold ${getAvatarColor(
               modal.user.name,
-            )}\`}
+            )}`}
           >
             {getInitials(modal.user.name)}
           </span>
@@ -877,61 +866,4 @@ const UsersTablePage = () => {
   );
 };
 
-export default UsersTablePage;`;
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(codeString);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  return (
-    <div className="container mx-auto px-4 w-full border border-gray-300 rounded-lg overflow-hidden bg-white">
-      {/* Header */}
-      <div className="flex items-center justify-between bg-gray-900 text-white px-4 py-3">
-        <h3 className="font-semibold text-sm">React Table Component Code</h3>
-        <Button
-          onClick={handleCopy}
-          variant="ghost"
-          size="sm"
-          className="text-white hover:bg-gray-800 h-8 px-3"
-        >
-          {copied ? (
-            <Check className="h-4 w-4" />
-          ) : (
-            <Copy className="h-4 w-4" />
-          )}
-          <span className="ml-2 text-xs">{copied ? "Copied!" : "Copy"}</span>
-        </Button>
-      </div>
-
-      {/* Code Display */}
-      <div className="overflow-x-auto">
-        <SyntaxHighlighter
-          language="typescript"
-          style={atomOneDark}
-          customStyle={{
-            margin: 0,
-            padding: "1rem",
-            fontSize: "13px",
-            lineHeight: "1.5",
-            minHeight: "200px",
-            backgroundColor: "#1a1a1a",
-          }}
-          showLineNumbers
-          lineNumberStyle={{
-            color: "#666",
-            marginRight: "1rem",
-            userSelect: "none",
-          }}
-          wrapLines
-          lineProps={{ style: { whiteSpace: "pre-wrap" } }}
-        >
-          {codeString}
-        </SyntaxHighlighter>
-      </div>
-    </div>
-  );
-};
-
-export default ReactTable;
+export default UsersTablePage;
