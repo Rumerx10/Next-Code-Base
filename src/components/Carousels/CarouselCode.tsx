@@ -158,7 +158,7 @@ export default SwiperCarousel;
 
 
 -------------------------------using Ref-------------------------------------
-// components/ModalImageGallery.jsx
+
 "use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
