@@ -153,10 +153,6 @@ const SwiperCarousel = () => {
 
 export default SwiperCarousel;
 
-
-
-
-
 -------------------------------using Ref-------------------------------------
 
 "use client";
