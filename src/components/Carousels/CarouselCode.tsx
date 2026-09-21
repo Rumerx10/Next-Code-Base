@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button";
 
 const CarouselCode = () => {
   const [copied, setCopied] = useState(false);
-
-  const codeString = `"use client";
+  const codeString = `
+  "use client";
 import React from "react";
 import {
   Autoplay,
