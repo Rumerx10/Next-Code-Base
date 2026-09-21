@@ -1,18 +1,21 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/scrollbar";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 
-
-@theme{
-  --color-popover:#ffffff;
-  --color-popover-foreground:#0a0a0a;
-  --color-background:#ffffff;
-  --color-card:#ffffff;
-  --color-input:#e5e5e5;
-  --color-muted:#f5f5f5;
-  --color-muted-foreground:#737373;
-  --color-primary-foreground:#fafafa;
-  --color-primary:#171717;
-  --color-secondary:#F5F5F5;
-  --color-accent:#F5F5F5;  
+@theme {
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0a0a0a;
+  --color-background: #ffffff;
+  --color-card: #ffffff;
+  --color-input: #e5e5e5;
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #737373;
+  --color-primary-foreground: #fafafa;
+  --color-primary: #171717;
+  --color-secondary: #f5f5f5;
+  --color-accent: #f5f5f5;
 }
 
 :root {
@@ -31,7 +34,6 @@ body {
   /* overflow:hidden; */
   font-family: Arial, Helvetica, sans-serif;
 }
-
 
 *:not([class*="border-"]) {
   border-color: #e5e5e5;

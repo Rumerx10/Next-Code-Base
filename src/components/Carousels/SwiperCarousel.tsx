@@ -11,12 +11,6 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import { Images } from "@/lib/utils";
 
 
